@@ -1,0 +1,38 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+h1{
+    taxt-align: center;
+    color: #333;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.completed{
+    text-decoration: line-through;
+    color:green;
+}
+
+a{
+    margin-left: 10px;
+    text-decoration:none ;
+    color: blue;
+
+}

@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'tasks/style.css' %}">
+<script src="{% static 'tasks/script.js' %}" defer></script>
+
+
+
+
+<h1> Tasks</h1>
+
+<a href="{% url 'task_create'%}">Add new Tasks </a>
+
+<ul>
+  {% for task in tasks %}
+    <li class="{% if task.completed %}completed{% endif %}">
+      {{ task.title }}
+      <span>
+        <a href="{% url 'task_update' task.pk %}">Edit</a>
+        <a href="{% url 'task_delete' task.pk %}">Delete</a>
+      </span>
+    </li>
+  {% empty %}
+    <li>No tasks yet.</li>
+  {% endfor %}
+</ul>
