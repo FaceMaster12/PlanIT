@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'tasks/style.css' %}">
+
+<h2>{{ title }}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn-primary">Save</button>
+</form>
+<a href="{% url 'tasks_list' %}">Back to tasks</a>
